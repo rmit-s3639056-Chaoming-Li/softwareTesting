@@ -31,7 +31,9 @@ public class FlesRentSystem {
 			for (int i = 0; i < menu.length; i++) {
 				System.out.println(menu[i]);
 			}
+			
 			a = inputInt();
+			
 			switch (a) {
 			case 1:
 				this.addProperty();
@@ -52,7 +54,7 @@ public class FlesRentSystem {
 				this.displayAllProperties();
 				break;
 			case 7:
-				break;
+				
 			default:
 				System.out.println("please enter an interger between 1 to 7");
 				break;
@@ -66,17 +68,20 @@ public class FlesRentSystem {
 			System.out.println("number of property reach the maxmium 50");
 			return;
 		}
+		
 		Scanner sc = new Scanner(System.in);
 		System.out.println("input the street Num");
 		int streetNum = inputInt();
-		if (streetNum == 0)
-			return;
+		
+		if (streetNum == 0)return;
+		
 		System.out.println("input the street name");
 		String StreetName = sc.nextLine();
 		System.out.println("intput the suburb");
 		String suburb = sc.nextLine();
 		System.out.println("Enter the property type: 1 for Aparmenty, 2 for Premium Suit");
 		int type = inputInt();
+		
 		if (type != 1 && type != 2) {
 			System.out.println("please enter 1 or 2");
 			return;

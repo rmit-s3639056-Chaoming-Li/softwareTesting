@@ -274,8 +274,10 @@ public abstract class Property {
 	public String toString() {
 		String information = this.propertyID + ":" + this.streetNum + ":" + this.streetName + "+" + this.suburb + ":"
 				+ this.type + ":" + this.bedroomNum + ":" + this.status;
+		
 		if (this.type.equals("Premium Suit"))
 			information += ":" + ((PremiumSuit) this).getLastMaintenanceDate();
+		
 		return information;
 
 	}
@@ -287,9 +289,11 @@ public abstract class Property {
 				+ String.format("%-25s:%1s\n", "type", this.type)
 				+ String.format("%-25s:%1s\n", "bedroom", this.bedroomNum)
 				+ String.format("%-25s:%1s\n", "status", this.status);
+		
 		if (this.type.equals("Premium Suit")) {
 			details += String.format("%-25s:%1s\n", "last Maintence", ((PremiumSuit) this).getLastMaintenanceDate());
 		}
+		
 		if (this.recordList[0] != null) {
 			details += "RENTAL RECORD\n";
 			details += this.recordList[0].getDetails();
